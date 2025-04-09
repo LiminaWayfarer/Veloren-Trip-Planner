@@ -1,0 +1,148 @@
+[gd_scene load_steps=8 format=3 uid="uid://dwppjedfof8ug"]
+
+[ext_resource type="Texture2D" uid="uid://fhocexw1qyr" path="res://Textures/Icon_city.png" id="1_kr72u"]
+[ext_resource type="Script" uid="uid://ctxs3l3p2rggm" path="res://Scenes/Icons/city.gd" id="2_4e1dv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kr72u"]
+bg_color = Color(0.442, 0.42, 0.75, 0.435294)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 1
+expand_margin_left = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_kr72u"]
+font_size = 10
+
+[sub_resource type="Animation" id="Animation_m7k8b"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_hpa3k"]
+resource_name = "expand"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(2, 2)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o3tkm"]
+_data = {
+&"RESET": SubResource("Animation_m7k8b"),
+&"expand": SubResource("Animation_hpa3k")
+}
+
+[node name="City" type="TextureRect"]
+texture_filter = 1
+texture_repeat = 1
+custom_minimum_size = Vector2(15, 15)
+offset_right = 15.0
+offset_bottom = 15.0
+pivot_offset = Vector2(7.5, 7.5)
+texture = ExtResource("1_kr72u")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("2_4e1dv")
+
+[node name="Control" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(100, 15)
+layout_mode = 0
+offset_left = -42.0
+offset_top = -11.0
+offset_right = 58.0
+offset_bottom = 4.0
+alignment = 1
+
+[node name="Control" type="Control" parent="Control"]
+layout_mode = 2
+size_flags_horizontal = 2
+
+[node name="CityName" type="Label" parent="Control"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_styles/normal = SubResource("StyleBoxFlat_kr72u")
+text = "City"
+label_settings = SubResource("LabelSettings_kr72u")
+horizontal_alignment = 3
+vertical_alignment = 3
+
+[node name="Control2" type="Control" parent="Control"]
+layout_mode = 2
+size_flags_horizontal = 10
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_o3tkm")
+}
+
+[node name="PopupMenu" type="PopupMenu" parent="."]
+theme_override_colors/font_disabled_color = Color(0.895437, 0.75266, 0.921936, 1)
+item_count = 4
+item_0/text = "City"
+item_0/id = 0
+item_0/disabled = true
+item_1/id = 3
+item_1/separator = true
+item_2/text = "Start here"
+item_2/id = 1
+item_3/text = "Go here"
+item_3/id = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PopupMenu"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 1
+
+[node name="Button" type="Button" parent="PopupMenu/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+text = "Start"
+clip_text = true
+
+[node name="Button2" type="Button" parent="PopupMenu/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+text = "End"
+
+[node name="Button" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="id_pressed" from="PopupMenu" to="." method="_on_popup_menu_id_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

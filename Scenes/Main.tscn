@@ -1,0 +1,374 @@
+[gd_scene load_steps=4 format=3 uid="uid://baeviq5rtowjx"]
+
+[ext_resource type="Texture2D" uid="uid://ct3c3boiedrat" path="res://Textures/Map_noicons.png" id="1_kln2b"]
+[ext_resource type="Script" uid="uid://cn2xyfelwq84l" path="res://PathFinder.gd" id="1_rgh2o"]
+[ext_resource type="PackedScene" uid="uid://dwppjedfof8ug" path="res://Scenes/Icons/city.tscn" id="3_pbw6q"]
+
+[node name="Control" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rgh2o")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+text = "Veloren trip planner"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FromCity" type="Label" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Going from..."
+horizontal_alignment = 1
+
+[node name="OriginCity" type="Label" parent="HBoxContainer/VBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "None selected!"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="ToCity" type="Label" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "To..."
+horizontal_alignment = 1
+
+[node name="TargetCity" type="Label" parent="HBoxContainer/VBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "None selected!"
+horizontal_alignment = 1
+
+[node name="HSeparator2" type="HSeparator" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="HSeparator3" type="HSeparator" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="Distance" type="Label" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Relative distance between cities:"
+horizontal_alignment = 1
+
+[node name="CityDistance" type="Label" parent="HBoxContainer/VBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "None"
+horizontal_alignment = 1
+
+[node name="Spacer" type="Control" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ShowCities" type="CheckButton" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Show city names on map"
+
+[node name="Spacer2" type="Control" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ResetPath" type="Button" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Reset"
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(620, 620)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_kln2b")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="PathDisplay" type="Line2D" parent="HBoxContainer/TextureRect"]
+unique_name_in_owner = true
+top_level = true
+z_index = 1
+width = 5.0
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Cities" type="Control" parent="HBoxContainer/TextureRect"]
+unique_name_in_owner = true
+z_index = 2
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Okon" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
+layout_mode = 0
+offset_left = -18.1255
+offset_top = -301.5
+offset_right = -3.12549
+offset_bottom = -286.5
+Links = [NodePath("../Nokzukiti"), NodePath("../Elam"), NodePath("../Radek"), NodePath("../Ayaprik")]
+
+[node name="Nokzukiti" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
+layout_mode = 0
+offset_left = 195.875
+offset_top = -276.5
+offset_right = 210.875
+offset_bottom = -261.5
+Links = [NodePath("../Okon"), NodePath("../Bisfard"), NodePath("../Rezillah"), NodePath("../Venton")]
+
+[node name="Mosaeirmad" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
+layout_mode = 0
+offset_left = -105.125
+offset_top = -261.5
+offset_right = -90.1255
+offset_bottom = -246.5
+Links = [NodePath("../Bisfard"), NodePath("../Bakhish"), NodePath("../Rezillah"), NodePath("../Elam")]
+
+[node name="Gbinsu" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
+layout_mode = 0
+offset_left = 228.875
+offset_top = -255.5
+offset_right = 243.875
+offset_bottom = -240.5
+Links = [NodePath("../Waoubi"), NodePath("../Kembe"), NodePath("../Primore")]
+
+[node name="Venton" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
+layout_mode = 0
+offset_left = 234.875
+offset_top = -210.5
+offset_right = 249.875
+offset_bottom = -195.5
+Links = [NodePath("../Nokzukiti"), NodePath("../Radek"), NodePath("../Waoubi"), NodePath("../Ayif")]
+
+[node name="Sarr" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
+layout_mode = 0
+offset_left = -151.125
+offset_top = -188.5
+offset_right = -136.125
+offset_bottom = -173.5
+Links = [NodePath("../Mosafa"), NodePath("../Achamor"), NodePath("../Henburg"), NodePath("../Kembe")]
+
+[node name="Thas" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
+layout_mode = 0
+offset_left = 125.875
+offset_top = -153.5
+offset_right = 140.875
+offset_bottom = -138.5
+Links = [NodePath("../Wraugelon"), NodePath("../Pling"), NodePath("../Asjulus"), NodePath("../Bakhish")]
+
+[node name="Wraugelon" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
+layout_mode = 0
+offset_left = 33.8745
+offset_top = -120.5
+offset_right = 48.8745
+offset_bottom = -105.5
+Links = [NodePath("../Sporia"), NodePath("../Achamor"), NodePath("../Thas"), NodePath("../Astalis")]
+
+[node name="Primore" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
+layout_mode = 0
+offset_left = 173.875
+offset_top = -38.5
+offset_right = 188.875
+offset_bottom = -23.5
+Links = [NodePath("../Lamoethman"), NodePath("../Sporia"), NodePath("../Gbinsu")]
+
+[node name="Gard" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
+layout_mode = 0
+offset_left = -226.125
+offset_top = -18.5
+offset_right = -211.125
+offset_bottom = -3.5
+Links = [NodePath("../Waoubi"), NodePath("../Ochreseaux"), NodePath("../Pling")]
+
+[node name="Achamor" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
+layout_mode = 0
+offset_left = -66.1255
+offset_top = 0.5
+offset_right = -51.1255
+offset_bottom = 15.5
+Links = [NodePath("../Sarr"), NodePath("../Wraugelon"), NodePath("../Bakhish"), NodePath("../Asjakan")]
+
+[node name="Sporia" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
+layout_mode = 0
+offset_left = -13.1255
+offset_top = 3.5
+offset_right = 1.87451
+offset_bottom = 18.5
+Links = [NodePath("../Saipkh"), NodePath("../Elam"), NodePath("../Primore"), NodePath("../Wraugelon")]
+
+[node name="Bisfard" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
+layout_mode = 0
+offset_left = 222.875
+offset_right = 237.875
+Links = [NodePath("../Mosaeirmad"), NodePath("../Nokzukiti"), NodePath("../Asjulus")]
+
+[node name="Henburg" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
+layout_mode = 0
+offset_left = -273.125
+offset_top = 39.5
+offset_right = -258.125
+offset_bottom = 54.5
+Links = [NodePath("../Rezillah"), NodePath("../Sarr"), NodePath("../Asjakan"), NodePath("../Pling")]
+
+[node name="Bakhish" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
+layout_mode = 0
+offset_left = 242.875
+offset_top = 45.5
+offset_right = 257.875
+offset_bottom = 60.5
+Links = [NodePath("../Mosaeirmad"), NodePath("../Achamor"), NodePath("../Mosyprtab"), NodePath("../Pling")]
+
+[node name="Asjulus" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
+layout_mode = 0
+offset_left = 211.875
+offset_top = 70.5
+offset_right = 226.875
+offset_bottom = 85.5
+Links = [NodePath("../Bisfard"), NodePath("../Rezillah"), NodePath("../Astalis"), NodePath("../Thas")]
+
+[node name="Mosafa" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
+layout_mode = 0
+offset_left = 293.875
+offset_top = 72.5
+offset_right = 308.875
+offset_bottom = 87.5
+Links = [NodePath("../Sarr"), NodePath("../Saipkh"), NodePath("../Ayif"), NodePath("../Lamoethman")]
+
+[node name="Raopsuan" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
+layout_mode = 0
+offset_left = 262.875
+offset_top = 90.5
+offset_right = 277.875
+offset_bottom = 105.5
+Links = [NodePath("../Thas"), NodePath("../Ayaprik")]
+
+[node name="Mosyprtab" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
+layout_mode = 0
+offset_left = 232.875
+offset_top = 109.5
+offset_right = 247.875
+offset_bottom = 124.5
+Links = [NodePath("../Radek"), NodePath("../Elam"), NodePath("../Ayif"), NodePath("../Bakhish")]
+
+[node name="Rezillah" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
+layout_mode = 0
+offset_left = 269.875
+offset_top = 129.5
+offset_right = 284.875
+offset_bottom = 144.5
+Links = [NodePath("../Asjulus"), NodePath("../Henburg"), NodePath("../Nokzukiti"), NodePath("../Wraugelon")]
+
+[node name="Saipkh" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
+layout_mode = 0
+offset_left = 162.875
+offset_top = 110.5
+offset_right = 177.875
+offset_bottom = 125.5
+Links = [NodePath("../Sporia"), NodePath("../Mosafa"), NodePath("../Lamoethman")]
+
+[node name="Waoubi" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
+layout_mode = 0
+offset_left = 122.875
+offset_top = 124.5
+offset_right = 137.875
+offset_bottom = 139.5
+Links = [NodePath("../Venton"), NodePath("../Gbinsu"), NodePath("../Gard")]
+
+[node name="Astalis" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
+layout_mode = 0
+offset_left = 12.8745
+offset_top = 126.5
+offset_right = 27.8745
+offset_bottom = 141.5
+Links = [NodePath("../Ochreseaux"), NodePath("../Lamoethman"), NodePath("../Asjulus"), NodePath("../Wraugelon")]
+
+[node name="Kembe" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
+layout_mode = 0
+offset_left = -221.125
+offset_top = 201.5
+offset_right = -206.125
+offset_bottom = 216.5
+Links = [NodePath("../Sarr"), NodePath("../Ayif"), NodePath("../Thas"), NodePath("../Ayaprik")]
+
+[node name="Pling" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
+layout_mode = 0
+offset_left = -184.125
+offset_top = 203.5
+offset_right = -169.125
+offset_bottom = 218.5
+Links = [NodePath("../Henburg"), NodePath("../Gard"), NodePath("../Bakhish"), NodePath("../Thas")]
+
+[node name="Ochreseaux" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
+layout_mode = 0
+offset_left = -59.1255
+offset_top = 219.5
+offset_right = -44.1255
+offset_bottom = 234.5
+Links = [NodePath("../Gard"), NodePath("../Radek"), NodePath("../Asjakan"), NodePath("../Astalis")]
+
+[node name="Ayif" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
+layout_mode = 0
+offset_left = 41.8745
+offset_top = 246.5
+offset_right = 56.8745
+offset_bottom = 261.5
+Links = [NodePath("../Kembe"), NodePath("../Venton"), NodePath("../Mosyprtab"), NodePath("../Mosafa")]
+
+[node name="Asjakan" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
+layout_mode = 0
+offset_left = 75.8745
+offset_top = 276.5
+offset_right = 90.8745
+offset_bottom = 291.5
+Links = [NodePath("../Henburg"), NodePath("../Ochreseaux"), NodePath("../Achamor"), NodePath("../Ayaprik")]
+
+[node name="Lamoethman" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
+layout_mode = 0
+offset_left = 170.875
+offset_top = 246.5
+offset_right = 185.875
+offset_bottom = 261.5
+Links = [NodePath("../Saipkh"), NodePath("../Mosafa"), NodePath("../Primore"), NodePath("../Astalis")]
+
+[node name="Elam" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
+layout_mode = 0
+offset_left = 130.875
+offset_top = 185.5
+offset_right = 145.875
+offset_bottom = 200.5
+Links = [NodePath("../Sporia"), NodePath("../Okon"), NodePath("../Mosaeirmad"), NodePath("../Mosyprtab")]
+
+[node name="Ayaprik" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
+layout_mode = 0
+offset_left = 192.875
+offset_top = 186.5
+offset_right = 207.875
+offset_bottom = 201.5
+Links = [NodePath("../Asjakan"), NodePath("../Raopsuan"), NodePath("../Kembe"), NodePath("../Okon")]
+
+[node name="Radek" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
+layout_mode = 0
+offset_left = 249.875
+offset_top = 162.5
+offset_right = 264.875
+offset_bottom = 177.5
+Links = [NodePath("../Okon"), NodePath("../Ochreseaux"), NodePath("../Venton"), NodePath("../Mosyprtab")]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[connection signal="toggled" from="HBoxContainer/VBoxContainer2/ShowCities" to="." method="_on_show_cities_toggled"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer2/ResetPath" to="." method="_on_reset_path_button_pressed"]
