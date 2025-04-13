@@ -126,7 +126,7 @@ offset_left = -18.1255
 offset_top = -301.5
 offset_right = -3.12549
 offset_bottom = -286.5
-Links = [NodePath("../Elam"), NodePath("../Ayaprik")]
+Links = [NodePath("../Elam"), NodePath("../Ayaprik"), NodePath("../Sarr")]
 
 [node name="Nokzukiti" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
 visible = false
@@ -169,7 +169,7 @@ offset_left = -151.125
 offset_top = -188.5
 offset_right = -136.125
 offset_bottom = -173.5
-Links = [NodePath("../Mosafa"), NodePath("../Kembe")]
+Links = [NodePath("../Mosafa"), NodePath("../Kembe"), NodePath("../Okon")]
 
 [node name="Thas" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
 visible = false
@@ -204,7 +204,7 @@ offset_left = -226.125
 offset_top = -18.5
 offset_right = -211.125
 offset_bottom = -3.5
-Links = [NodePath("../Ochreseaux")]
+Links = [NodePath("../Ochreseaux"), NodePath("../Waoubi")]
 
 [node name="Achamor" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
 visible = false
@@ -304,7 +304,7 @@ offset_left = 122.875
 offset_top = 124.5
 offset_right = 137.875
 offset_bottom = 139.5
-Links = [NodePath("../Ochreseaux"), NodePath("../Gbinsu")]
+Links = [NodePath("../Ochreseaux"), NodePath("../Gbinsu"), NodePath("../Gard")]
 
 [node name="Astalis" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
 visible = false
