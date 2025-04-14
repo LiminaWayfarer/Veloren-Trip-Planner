@@ -126,10 +126,9 @@ offset_left = -18.1255
 offset_top = -301.5
 offset_right = -3.12549
 offset_bottom = -286.5
-Links = [NodePath("../Elam"), NodePath("../Ayaprik"), NodePath("../Sarr")]
+Links = [NodePath("../Elam"), NodePath("../Ayaprik"), NodePath("../Sarr"), NodePath("../Radek")]
 
 [node name="Nokzukiti" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
-visible = false
 layout_mode = 0
 offset_left = 195.875
 offset_top = -276.5
@@ -143,10 +142,9 @@ offset_left = -105.125
 offset_top = -261.5
 offset_right = -90.1255
 offset_bottom = -246.5
-Links = [NodePath("../Elam")]
+Links = [NodePath("../Elam"), NodePath("../Astalis"), NodePath("../Rezillah"), NodePath("../Bakhish")]
 
 [node name="Gbinsu" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
-visible = false
 layout_mode = 0
 offset_left = 228.875
 offset_top = -255.5
@@ -155,7 +153,6 @@ offset_bottom = -240.5
 Links = [NodePath("../Primore"), NodePath("../Waoubi"), NodePath("../Kembe"), NodePath("../Bakhish")]
 
 [node name="Venton" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
-visible = false
 layout_mode = 0
 offset_left = 234.875
 offset_top = -210.5
@@ -169,10 +166,9 @@ offset_left = -151.125
 offset_top = -188.5
 offset_right = -136.125
 offset_bottom = -173.5
-Links = [NodePath("../Mosafa"), NodePath("../Kembe"), NodePath("../Okon")]
+Links = [NodePath("../Mosafa"), NodePath("../Kembe"), NodePath("../Okon"), NodePath("../Henburg")]
 
 [node name="Thas" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
-visible = false
 layout_mode = 0
 offset_left = 125.875
 offset_top = -153.5
@@ -181,7 +177,6 @@ offset_bottom = -138.5
 Links = [NodePath("../Elam"), NodePath("../Raopsuan"), NodePath("../Asjulus"), NodePath("../Pling")]
 
 [node name="Wraugelon" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
-visible = false
 layout_mode = 0
 offset_left = 33.8745
 offset_top = -120.5
@@ -190,7 +185,6 @@ offset_bottom = -105.5
 Links = [NodePath("../Sporia"), NodePath("../Achamor"), NodePath("../Nokzukiti"), NodePath("../Astalis")]
 
 [node name="Primore" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
-visible = false
 layout_mode = 0
 offset_left = 173.875
 offset_top = -38.5
@@ -204,10 +198,9 @@ offset_left = -226.125
 offset_top = -18.5
 offset_right = -211.125
 offset_bottom = -3.5
-Links = [NodePath("../Ochreseaux"), NodePath("../Waoubi")]
+Links = [NodePath("../Ochreseaux"), NodePath("../Waoubi"), NodePath("../Bisfard")]
 
 [node name="Achamor" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
-visible = false
 layout_mode = 0
 offset_left = -66.1255
 offset_top = 0.5
@@ -216,7 +209,6 @@ offset_bottom = 15.5
 Links = [NodePath("../Wraugelon"), NodePath("../Bakhish"), NodePath("../Ayaprik"), NodePath("../Asjakan")]
 
 [node name="Sporia" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
-visible = false
 layout_mode = 0
 offset_left = -13.1255
 offset_top = 3.5
@@ -228,7 +220,7 @@ Links = [NodePath("../Saipkh"), NodePath("../Asjakan"), NodePath("../Primore"), 
 layout_mode = 0
 offset_left = 222.875
 offset_right = 237.875
-Links = [NodePath("../Nokzukiti"), NodePath("../Asjulus"), NodePath("../Mosyprtab")]
+Links = [NodePath("../Nokzukiti"), NodePath("../Asjulus"), NodePath("../Mosyprtab"), NodePath("../Gard")]
 
 [node name="Henburg" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
 layout_mode = 0
@@ -236,7 +228,7 @@ offset_left = -273.125
 offset_top = 39.5
 offset_right = -258.125
 offset_bottom = 54.5
-Links = [NodePath("../Venton"), NodePath("../Rezillah"), NodePath("../Pling")]
+Links = [NodePath("../Venton"), NodePath("../Rezillah"), NodePath("../Pling"), NodePath("../Sarr")]
 
 [node name="Bakhish" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
 layout_mode = 0
@@ -244,10 +236,9 @@ offset_left = 242.875
 offset_top = 45.5
 offset_right = 257.875
 offset_bottom = 60.5
-Links = [NodePath("../Gbinsu"), NodePath("../Achamor"), NodePath("../Pling")]
+Links = [NodePath("../Gbinsu"), NodePath("../Achamor"), NodePath("../Pling"), NodePath("../Mosaeirmad")]
 
 [node name="Asjulus" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
-visible = false
 layout_mode = 0
 offset_left = 211.875
 offset_top = 70.5
@@ -256,7 +247,6 @@ offset_bottom = 85.5
 Links = [NodePath("../Astalis"), NodePath("../Thas"), NodePath("../Bisfard"), NodePath("../Kembe")]
 
 [node name="Mosafa" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
-visible = false
 layout_mode = 0
 offset_left = 293.875
 offset_top = 72.5
@@ -265,7 +255,6 @@ offset_bottom = 87.5
 Links = [NodePath("../Radek"), NodePath("../Saipkh"), NodePath("../Lamoethman"), NodePath("../Sarr")]
 
 [node name="Raopsuan" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
-visible = false
 layout_mode = 0
 offset_left = 262.875
 offset_top = 90.5
@@ -274,7 +263,6 @@ offset_bottom = 105.5
 Links = [NodePath("../Elam"), NodePath("../Thas"), NodePath("../Primore"), NodePath("../Ayaprik")]
 
 [node name="Mosyprtab" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
-visible = false
 layout_mode = 0
 offset_left = 232.875
 offset_top = 109.5
@@ -288,7 +276,7 @@ offset_left = 269.875
 offset_top = 129.5
 offset_right = 284.875
 offset_bottom = 144.5
-Links = [NodePath("../Nokzukiti"), NodePath("../Henburg"), NodePath("../Mosyprtab")]
+Links = [NodePath("../Nokzukiti"), NodePath("../Henburg"), NodePath("../Mosyprtab"), NodePath("../Mosaeirmad")]
 
 [node name="Saipkh" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
 layout_mode = 0
@@ -296,7 +284,7 @@ offset_left = 162.875
 offset_top = 110.5
 offset_right = 177.875
 offset_bottom = 125.5
-Links = [NodePath("../Sporia"), NodePath("../Mosafa"), NodePath("../Mosyprtab")]
+Links = [NodePath("../Sporia"), NodePath("../Mosafa"), NodePath("../Mosyprtab"), NodePath("../Pling")]
 
 [node name="Waoubi" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
 layout_mode = 0
@@ -307,16 +295,14 @@ offset_bottom = 139.5
 Links = [NodePath("../Ochreseaux"), NodePath("../Gbinsu"), NodePath("../Gard")]
 
 [node name="Astalis" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
-visible = false
 layout_mode = 0
 offset_left = 12.8745
 offset_top = 126.5
 offset_right = 27.8745
 offset_bottom = 141.5
-Links = [NodePath("../Wraugelon"), NodePath("../Lamoethman"), NodePath("../Asjulus")]
+Links = [NodePath("../Wraugelon"), NodePath("../Lamoethman"), NodePath("../Asjulus"), NodePath("../Mosaeirmad")]
 
 [node name="Kembe" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
-visible = false
 layout_mode = 0
 offset_left = -221.125
 offset_top = 201.5
@@ -330,10 +316,9 @@ offset_left = -184.125
 offset_top = 203.5
 offset_right = -169.125
 offset_bottom = 218.5
-Links = [NodePath("../Thas"), NodePath("../Bakhish"), NodePath("../Henburg")]
+Links = [NodePath("../Thas"), NodePath("../Bakhish"), NodePath("../Henburg"), NodePath("../Saipkh")]
 
 [node name="Ochreseaux" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
-visible = false
 layout_mode = 0
 offset_left = -59.1255
 offset_top = 219.5
@@ -342,7 +327,6 @@ offset_bottom = 234.5
 Links = [NodePath("../Waoubi"), NodePath("../Asjakan"), NodePath("../Radek"), NodePath("../Gard")]
 
 [node name="Ayif" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
-visible = false
 layout_mode = 0
 offset_left = 41.8745
 offset_top = 246.5
@@ -351,7 +335,6 @@ offset_bottom = 261.5
 Links = [NodePath("../Kembe"), NodePath("../Mosyprtab"), NodePath("../Lamoethman"), NodePath("../Venton")]
 
 [node name="Asjakan" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
-visible = false
 layout_mode = 0
 offset_left = 75.8745
 offset_top = 276.5
@@ -365,10 +348,9 @@ offset_left = 170.875
 offset_top = 246.5
 offset_right = 185.875
 offset_bottom = 261.5
-Links = [NodePath("../Astalis"), NodePath("../Ayif"), NodePath("../Primore")]
+Links = [NodePath("../Astalis"), NodePath("../Ayif"), NodePath("../Primore"), NodePath("../Mosafa")]
 
 [node name="Elam" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
-visible = false
 layout_mode = 0
 offset_left = 130.875
 offset_top = 185.5
@@ -377,7 +359,6 @@ offset_bottom = 200.5
 Links = [NodePath("../Thas"), NodePath("../Raopsuan"), NodePath("../Mosaeirmad"), NodePath("../Okon")]
 
 [node name="Ayaprik" parent="HBoxContainer/TextureRect/Cities" node_paths=PackedStringArray("Links") instance=ExtResource("3_pbw6q")]
-visible = false
 layout_mode = 0
 offset_left = 192.875
 offset_top = 186.5
@@ -391,7 +372,7 @@ offset_left = 249.875
 offset_top = 162.5
 offset_right = 264.875
 offset_bottom = 177.5
-Links = [NodePath("../Ochreseaux"), NodePath("../Venton"), NodePath("../Mosafa")]
+Links = [NodePath("../Ochreseaux"), NodePath("../Venton"), NodePath("../Mosafa"), NodePath("../Okon")]
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
 layout_mode = 2
@@ -408,8 +389,8 @@ horizontal_alignment = 1
 [node name="Warning" type="Label" parent="HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(300, 70)
 layout_mode = 2
-text = "Raopsuan and Rezillah's airship towers are missing.
-You will not be able to climb up to docked airships.
+text = "Raopsuan, Lamoethman and Rezillah's airship towers are missing.
+It may be hard or impossible to climb up to docked airships.
 (they dock high up in the air)"
 label_settings = SubResource("LabelSettings_kln2b")
 horizontal_alignment = 1
@@ -422,7 +403,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "Last updated:
-13th April 2025 (build c019bef)"
+14th April 2025 (build c019bef)"
 horizontal_alignment = 1
 
 [node name="Control" type="Control" parent="HBoxContainer/VBoxContainer"]
